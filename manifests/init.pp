@@ -372,25 +372,6 @@ manila::rpc_backend are deprecated. Please use manila::default_transport_url ins
     kombu_ssl_version   => $kombu_ssl_version,
   }
 
-  oslo::messaging::amqp { 'manila_config':
-    server_request_prefix  => $amqp_server_request_prefix,
-    broadcast_prefix       => $amqp_broadcast_prefix,
-    group_request_prefix   => $amqp_group_request_prefix,
-    container_name         => $amqp_container_name,
-    idle_timeout           => $amqp_idle_timeout,
-    trace                  => $amqp_trace,
-    allow_insecure_clients => $amqp_allow_insecure_clients,
-    ssl_ca_file            => $amqp_ssl_ca_file,
-    ssl_key_password       => $amqp_ssl_key_password,
-    ssl_cert_file          => $amqp_ssl_cert_file,
-    ssl_key_file           => $amqp_ssl_key_file,
-    sasl_mechanisms        => $amqp_sasl_mechanisms,
-    sasl_config_dir        => $amqp_sasl_config_dir,
-    sasl_config_name       => $amqp_sasl_config_name,
-    username               => $amqp_username,
-    password               => $amqp_password,
-  }
-
   oslo::messaging::default { 'manila_config':
     transport_url        => $default_transport_url,
     rpc_response_timeout => $rpc_response_timeout,
