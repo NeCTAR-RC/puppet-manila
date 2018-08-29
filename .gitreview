@@ -1,5 +1,5 @@
 [gerrit]
-host=review.openstack.org
+host=review.rc.nectar.org.au
 port=29418
-project=openstack/puppet-manila.git
-defaultbranch=stable/queens
+project=NeCTAR-RC/puppet-manila.git
+defaultbranch=nectar/queens
